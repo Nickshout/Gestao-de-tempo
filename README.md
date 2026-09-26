@@ -146,3 +146,43 @@ Captura (Kanban)
 
 **Responsivo (mobile)**
 ![Versão mobile](prints/mobile.png)
+
+## Melhorias Futuras
+
+O que segue registra, com transparência técnica, o que o sistema ainda não
+faz e seria a evolução natural do projeto numa versão pessoal — fora do
+escopo desta entrega acadêmica.
+
+- **Autenticação e isolamento por usuário**: hoje o sistema é single-user,
+  sem login. Uma versão multiusuário exigiria autenticação (ex.: Google
+  OAuth) e isolamento de dados por usuário em todas as tabelas do Airtable.
+- **Sincronização de compromissos com o Google Calendar**: permitir que um
+  compromisso criado no painel seja também refletido na agenda do Google do
+  usuário.
+- **Formulário próprio para métricas diárias**: hoje a tabela `Metrics` é
+  alimentada via API, sem uma tela dedicada no painel para o usuário
+  registrar o próprio dia.
+- **Notificações proativas**: hoje todo o acompanhamento depende do usuário
+  abrir o painel; não há lembrete ou alerta enviado pelo sistema.
+- **Persistência automática de sessões do Pomodoro**: o timer hoje roda
+  inteiramente no estado local do componente, sem gravar a sessão
+  concluída em nenhuma tabela. Uma sessão completa deveria alimentar
+  automaticamente `Metrics.FocusHours` (ou uma tabela própria de sessões),
+  fechando o ciclo entre execução e o dado que o Dashboard exibe.
+- **Testes automatizados**: a validação do projeto foi feita por
+  requisição direta às rotas (HTTP) e inspeção do HTML renderizado, sem
+  ferramenta de automação de navegador disponível no ambiente de
+  desenvolvimento usado. Uma suíte de testes de API e, depois, testes E2E
+  de interface, é a evolução natural dessa validação manual.
+- **Resiliência a descontinuação de modelo de IA**: o projeto já
+  enfrentou a descontinuação do modelo `gemini-2.0-flash` originalmente
+  especificado, exigindo migração em produção. Fixar o nome do modelo em
+  variável de ambiente, com um segundo modelo configurado como fallback
+  automático em caso de erro 404, evitaria repetir esse retrabalho.
+- **Proteção contra cliques duplicados nas ações de IA**: hoje nada
+  impede que um duplo clique em "sugerir prioridade" ou "desdobrar tarefa"
+  gere chamadas e registros duplicados em `AIInsights` para o mesmo
+  input. Debounce ou desabilitar o botão durante a chamada resolveria.
+- **Exportação e backup dos dados**: os dados vivem inteiramente no
+  Airtable, um serviço de terceiro, sem rotina de exportação ou backup
+  próprio documentada.
