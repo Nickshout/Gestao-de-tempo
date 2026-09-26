@@ -44,3 +44,6 @@ next-env.d.ts
 # instruções internas do projeto (não devem ir para o repositório público)
 GUIDELINES_CLAUDE_CODE.md
 CHECKLIST_FORA_DO_CLAUDE_CODE.md
+
+# entregáveis acadêmicos pessoais (não devem ir para o repositório público)
+/docs

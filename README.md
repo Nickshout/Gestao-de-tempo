@@ -106,4 +106,43 @@ Captura (Kanban)
 
 ## Prints
 
-<!-- Insira aqui screenshots do site publicado na Vercel. -->
+> Screenshots tiradas do site publicado na Vercel (não do localhost).
+
+**Visão geral do painel**
+![Visão geral](prints/visao-geral.png)
+
+**Kanban**
+![Kanban](prints/kanban.png)
+
+**Sugestão de prioridade da IA**
+![IA sugerindo prioridade](prints/ia-sugerir-prioridade.png)
+
+**Desdobramento de tarefa com IA (método EDA)**
+![IA desdobrando tarefa](prints/ia-desdobrar-tarefa.png)
+
+**Planejamento Semanal**
+![Planejamento semanal](prints/planejamento.png)
+
+**Compromissos**
+![Compromissos](prints/compromissos.png)
+
+**Matriz de Eisenhower**
+![Matriz de Eisenhower](prints/eisenhower.png)
+
+**Pomodoro**
+![Pomodoro](prints/pomodoro.png)
+
+**Hábitos**
+![Hábitos](prints/habitos.png)
+
+**Protocolo de Comunicação**
+![Protocolo de Comunicação](prints/protocolo_de_comunicacao.png)
+
+**Dashboard**
+![Dashboard](prints/dashboard.png)
+
+**Histórico de IA**
+![Histórico de IA](prints/historico-ia.png)
+
+**Responsivo (mobile)**
+![Versão mobile](prints/mobile.png)
